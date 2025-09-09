@@ -1,0 +1,113 @@
+/* ========= THEME (vibrant & modern) ========= */
+:root{
+  --primary:#6C63FF;   /* indigo-violet */
+  --accent:#FF6B6B;    /* coral */
+  --teal:#00D1B2;      /* teal */
+  --ink:#0f172a;       /* deep slate text */
+  --muted:#667085;     /* soft gray text */
+  --soft:#f7f9fc;      /* page background */
+  --card:#ffffff;      /* card background */
+}
+
+*{box-sizing:border-box}
+
+/* Base */
+html,body{
+  scroll-behavior:smooth;
+}
+body{
+  background:var(--soft);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,system-ui,sans-serif;
+  line-height:1.6;
+}
+
+/* Navbar */
+.navbar .nav-link{ color:var(--muted); }
+.navbar .nav-link:hover{ color:var(--ink); }
+
+/* Brand gradient text */
+.brand-gradient{
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+/* Hero */
+.hero-gradient{
+  background:linear-gradient(135deg,rgba(108,99,255,.12),rgba(255,107,107,.10));
+}
+.hero-photo{
+  width:180px; height:180px; object-fit:cover;
+  border:6px solid #fff;
+}
+
+/* Sections */
+.section-pad{ padding:64px 0; }
+.section-title{
+  font-weight:800; margin-bottom:18px;
+  background:linear-gradient(135deg,var(--primary),var(--teal));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.bg-soft{ background:#fbfcfe; }
+
+/* Cards */
+.card-neo{
+  background:var(--card);
+  border:0;
+  border-radius:1rem;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.card-neo:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(15,23,42,.12);
+}
+
+/* Buttons */
+.btn-brand{
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff; border:0; border-radius:.8rem;
+  box-shadow:0 8px 20px rgba(108,99,255,.25);
+}
+.btn-brand:hover{ filter:brightness(.95); color:#fff; }
+
+.btn-outline-brand{
+  border:2px solid var(--primary); color:var(--primary); border-radius:.8rem;
+}
+.btn-outline-brand:hover{ background:var(--primary); color:#fff; }
+
+/* Skills */
+.skill-badge{
+  background:linear-gradient(135deg,var(--primary),var(--teal));
+  color:#fff; font-weight:600; padding:.65rem 1rem; border-radius:999px;
+}
+
+/* Certificate grid */
+.certificate{ cursor:pointer; }
+.certificate .thumb{
+  width:100%; height:100%; object-fit:cover; border-radius:1rem 1rem 0 0;
+  transition:transform .25s ease, filter .25s ease;
+}
+.certificate:hover .thumb{ transform:scale(1.03); filter:saturate(1.1); }
+
+/* Modals — keep them clean and bright */
+.modal-content{
+  border:0; border-radius:1rem;
+  box-shadow:0 24px 60px rgba(15,23,42,.25);
+}
+
+/* Footer */
+footer{ background:transparent; }
+
+/* Accessibility focus */
+:focus-visible{
+  outline:3px solid var(--teal);
+  outline-offset:2px;
+}
+
+/* Small devices tweaks */
+@media (max-width: 575.98px){
+  .hero-photo{ width:150px; height:150px; }
+}
